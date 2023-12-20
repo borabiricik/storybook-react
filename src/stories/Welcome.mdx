@@ -1,0 +1,34 @@
+import { Meta, Canvas, Story, Source } from "@storybook/blocks"
+import Link from "../stories/components/Link"
+import Image from "next/image"
+import * as Label from "../app/components/Label/Label.stories"
+
+<Meta title="WELCOME !" />
+
+<div>
+  <h1>Welcome to NextJS Storybook Tutorial</h1>
+  <h3>You can find the examples in this docs.</h3>
+  <div className="py-10 space-y-4">
+    <b>In this documentation, you will find:</b>
+    <div className="flex items-center gap-4">
+      <Link link="Button">Button Component</Link>
+      <Link link="Label">Label Component</Link>
+    </div>
+    <h3>You also can render image:</h3>
+    <Image
+      alt="My image"
+      src={"https://picsum.photos/300/300"}
+      width={300}
+      height={300}
+    />
+    <h3>You can also render story here:</h3>
+    <Canvas>
+      <Story of={Label.Basic} />
+    </Canvas>
+
+    <h3>Or code: </h3>
+
+    <Source dark of={Label.Basic} />
+
+  </div>
+</div>
